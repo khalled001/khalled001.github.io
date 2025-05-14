@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Khalid Awadh Almutairi</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; background-color: #f4f4f4; padding: 60px; }
+        h1 { color: #004aad; margin-bottom: 10px; }
+        p { font-size: 18px; color: #333; }
+        .counter { font-size: 20px; margin-top: 30px; }
+    </style>
+</head>
+<body>
+    <h1>Khalid Awadh Almutairi</h1>
+    <p>Welcome to my personal portfolio website.</p>
+
+    <div class="counter">
+        👁️ Total Visitors: <span id="visits">Loading...</span>
+    </div>
+
+    <script>
+        fetch('https://api.countapi.xyz/hit/khalid-portfolio.github.io/visits')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('visits').textContent = data.value;
+            });
+    </script>
+</body>
+</html>
